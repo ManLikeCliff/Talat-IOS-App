@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+        <ProjectGuid>{61467A79-2C2F-4917-BB72-A2C1BA44341C}</ProjectGuid>
+        <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <TemplateGuid>{edc1b0fa-90cd-4038-8fad-98fe74adb368}</TemplateGuid>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>Talat</RootNamespace>
+        <AssemblyName>Talat</AssemblyName>
+        <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+        <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+        <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+        <ProvisioningType>automatic</ProvisioningType>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>x86_64</MtouchArch>
+        <MtouchLink>None</MtouchLink>
+        <MtouchDebug>true</MtouchDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchLink>None</MtouchLink>
+        <MtouchArch>x86_64</MtouchArch>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\iPhone\Debug</OutputPath>
+        <DefineConstants>DEBUG</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <CodesignKey>iPhone Developer</CodesignKey>
+        <MtouchDebug>true</MtouchDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\iPhone\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+        <MtouchArch>ARM64</MtouchArch>
+        <CodesignKey>iPhone Developer</CodesignKey>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Core" />
+        <Reference Include="Xamarin.iOS" />
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+      <PackageReference Include="Microsoft.AspNet.WebApi.Client">
+        <Version>5.2.7</Version>
+      </PackageReference>
+      <PackageReference Include="Newtonsoft.Json">
+        <Version>13.0.1</Version>
+      </PackageReference>
+      <PackageReference Include="Xam.Plugin.Connectivity">
+        <Version>3.2.0</Version>
+      </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+            <Visible>false</Visible>
+        </ImageAsset>
+        <ImageAsset Include="Resources\Assets.xcassets\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Splash Screen.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Splash Screen.imageset\Splash Screen.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Splash Screen.imageset\iPhone 11 Pro Max - Splash Screen%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Splash Screen.imageset\iPhone 11 Pro Max - Splash Screen.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Splash Screen.imageset\iPhone 11 Pro Max - Splash Screen%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Splash Screen.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Landing Page.imageset\iPhone 11 Pro Max - Splash Screen%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Landing Page.imageset\iPhone 11 Pro Max - Splash Screen.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Landing Page.imageset\iPhone 11 Pro Max - Splash Screen%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Landing Page.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Landing Page.imageset\iPhone 11 Pro Max - Landing Page.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Landing Page.imageset\iPhone 11 Pro Max - Landing Page%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Landing Page.imageset\iPhone 11 Pro Max - Landing Page%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\payment made easy.imageset\payment made easy%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\payment made easy.imageset\payment made easy.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\payment made easy.imageset\payment made easy%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\payment made easy.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\international trade.imageset\international trade%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\international trade.imageset\international trade%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\international trade.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\international trade.imageset\international trade.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\save today.imageset\save today%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\save today.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\save today.imageset\save today%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\save today.imageset\save today.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\travels and events.imageset\travels and events.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\travels and events.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\travels and events.imageset\travels and events%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\travels and events.imageset\travels and events%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Login Screen.imageset\iPhone 11 Pro Max - Login Screen%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Login Screen.imageset\iPhone 11 Pro Max - Login Screen.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Login Screen.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Login Screen.imageset\iPhone 11 Pro Max - Login Screen%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\carbon_email-new.imageset\carbon_email-new.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\carbon_email-new.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\carbon_email-new.imageset\carbon_email-new%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\carbon_email-new.imageset\carbon_email-new%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\carbon_password.imageset\carbon_password%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\carbon_password.imageset\carbon_password%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\carbon_password.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\carbon_password.imageset\carbon_password.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_eye-closed.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_eye-closed.imageset\ph_eye-closed%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_eye-closed.imageset\ph_eye-closed.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_eye-closed.imageset\ph_eye-closed%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_eye.imageset\ph_eye%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_eye.imageset\ph_eye%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_eye.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_eye.imageset\ph_eye.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\.DS_Store" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Landing Page.imageset\.DS_Store" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Dashboard.imageset\iPhone 11 Pro Max - Dashboard%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Dashboard.imageset\iPhone 11 Pro Max - Dashboard%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Dashboard.imageset\iPhone 11 Pro Max - Dashboard.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Dashboard.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\mdi_phone-clock.imageset\mdi_phone-clock%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\mdi_phone-clock.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\mdi_phone-clock.imageset\mdi_phone-clock%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\mdi_phone-clock.imageset\mdi_phone-clock.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_receipt-bold.imageset\ph_receipt-bold%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_receipt-bold.imageset\ph_receipt-bold%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_receipt-bold.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\ph_receipt-bold.imageset\ph_receipt-bold.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\mdi_bank-transfer.imageset\mdi_bank-transfer%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\mdi_bank-transfer.imageset\mdi_bank-transfer%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\mdi_bank-transfer.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\mdi_bank-transfer.imageset\mdi_bank-transfer.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\bx_bx-support.imageset\bx_bx-support%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\bx_bx-support.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\bx_bx-support.imageset\bx_bx-support.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\bx_bx-support.imageset\bx_bx-support%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\eva_settings-outline.imageset\eva_settings-outline.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\eva_settings-outline.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\eva_settings-outline.imageset\eva_settings-outline%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\eva_settings-outline.imageset\eva_settings-outline%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card view.imageset\Card view%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card view.imageset\Card view%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card view.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card view.imageset\Card view.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Send Money.imageset\Send Money%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Send Money.imageset\Send Money%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Send Money.imageset\Send Money.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Send Money.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\e-Naira Wallet.imageset\e-Naira Wallet.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\e-Naira Wallet.imageset\e-Naira Wallet%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\e-Naira Wallet.imageset\e-Naira Wallet%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\e-Naira Wallet.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Request.imageset\Card Request%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Request.imageset\Card Request%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Request.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Request.imageset\Card Request.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\TM.imageset\TM%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\TM.imageset\TM%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\TM.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\TM.imageset\TM.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Flexi Goal.imageset\Flexi Goal%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Flexi Goal.imageset\Flexi Goal%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Flexi Goal.imageset\Flexi Goal.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Flexi Goal.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Scan to pay.imageset\Scan to pay%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Scan to pay.imageset\Scan to pay%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Scan to pay.imageset\Scan to pay.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Scan to pay.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Send Money.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Send Money.imageset\iPhone 11 Pro Max - Send Money.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Send Money.imageset\iPhone 11 Pro Max - Send Money%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Send Money.imageset\iPhone 11 Pro Max - Send Money%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Transfer from rect.imageset\Transfer from rect.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Transfer from rect.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Transfer from rect.imageset\Transfer from rect%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Transfer from rect.imageset\Transfer from rect%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer from group.imageset\transfer from group%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer from group.imageset\transfer from group%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer from group.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer from group.imageset\transfer from group.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer icon.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer icon.imageset\transfer icon%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer icon.imageset\transfer icon.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer icon.imageset\transfer icon%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer to box.imageset\transfer to box%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer to box.imageset\transfer to box%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer to box.imageset\transfer to box.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\transfer to box.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\outline_color.colorset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\contactSelect.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\contactSelect.imageset\contactSelect.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\contactSelect.imageset\contactSelect%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\contactSelect.imageset\contactSelect%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\client pop up.imageset\client pop up.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\client pop up.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\client pop up.imageset\client pop up%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\client pop up.imageset\client pop up%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\radioBtnOff.imageset\radioBtnOff%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\radioBtnOff.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\radioBtnOff.imageset\radioBtnOff%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\radioBtnOff.imageset\radioBtnOff.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\radioBtnOn.imageset\radioBtnOn.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\radioBtnOn.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\radioBtnOn.imageset\radioBtnOn%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\radioBtnOn.imageset\radioBtnOn%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Tip Myself Menu.imageset\iPhone 11 Pro Max - Tip Myself Menu%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Tip Myself Menu.imageset\iPhone 11 Pro Max - Tip Myself Menu%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Tip Myself Menu.imageset\iPhone 11 Pro Max - Tip Myself Menu.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Tip Myself Menu.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\TM Percentage Box.imageset\TM Percentage Box%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\TM Percentage Box.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\TM Percentage Box.imageset\TM Percentage Box%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\TM Percentage Box.imageset\TM Percentage Box.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Line.imageset\Card Line.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Line.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Line.imageset\Card Line%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Line.imageset\Card Line%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Enter Pin.imageset\Enter Pin.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Enter Pin.imageset\Enter Pin%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Enter Pin.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Enter Pin.imageset\Enter Pin%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Signup Screen.imageset\iPhone 11 Pro Max - Signup Screen%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Signup Screen.imageset\iPhone 11 Pro Max - Signup Screen.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Signup Screen.imageset\iPhone 11 Pro Max - Signup Screen%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Signup Screen.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\TPinIcon.imageset\TPinIcon%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\TPinIcon.imageset\TPinIcon%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\TPinIcon.imageset\TPinIcon.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\TPinIcon.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\userIcon.imageset\userIcon%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\userIcon.imageset\userIcon%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\userIcon.imageset\userIcon.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\userIcon.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\success card.imageset\success card.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\success card.imageset\success card%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\success card.imageset\success card%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\success card.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\TransactionIcon.imageset\TransactionIcon%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\TransactionIcon.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\TransactionIcon.imageset\TransactionIcon%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\TransactionIcon.imageset\TransactionIcon.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\View transactions card.imageset\View transactions card.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\View transactions card.imageset\View transactions card%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\View transactions card.imageset\View transactions card%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\View transactions card.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Send Money %28Success%29.imageset\iPhone 11 Pro Max - Send Money %28Success%29%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Send Money %28Success%29.imageset\iPhone 11 Pro Max - Send Money %28Success%29%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Send Money %28Success%29.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\iPhone 11 Pro Max - Send Money %28Success%29.imageset\iPhone 11 Pro Max - Send Money %28Success%29.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\checkmark.imageset\checkmark.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\checkmark.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\checkmark.imageset\checkmark%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\checkmark.imageset\checkmark%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Success pop-up.imageset\Success pop-up%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Success pop-up.imageset\Success pop-up.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Success pop-up.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Success pop-up.imageset\Success pop-up%403x.png" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Resources\" />
+        <Folder Include="Controllers\" />
+        <Folder Include="Models\" />
+        <Folder Include="Utils\" />
+        <Folder Include="TableSources\" />
+        <Folder Include="ModelViews\" />
+    </ItemGroup>
+    <ItemGroup>
+        <InterfaceDefinition Include="LaunchScreen.storyboard" />
+        <InterfaceDefinition Include="Main.storyboard" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Info.plist" />
+        <None Include="Entitlements.plist" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Main.cs" />
+        <Compile Include="AppDelegate.cs" />
+        <Compile Include="SceneDelegate.cs" />
+        <Compile Include="AppDelegate.designer.cs">
+          <DependentUpon>AppDelegate.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Controllers\DashboardScreen.cs" />
+        <Compile Include="Controllers\DashboardScreen.designer.cs">
+          <DependentUpon>DashboardScreen.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Controllers\LoginScreen.cs" />
+        <Compile Include="Controllers\LoginScreen.designer.cs">
+          <DependentUpon>LoginScreen.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Controllers\PasswordField.cs" />
+        <Compile Include="Controllers\PasswordField.designer.cs">
+          <DependentUpon>PasswordField.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Controllers\ViewController.cs" />
+        <Compile Include="Controllers\ViewController.designer.cs">
+          <DependentUpon>ViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Controllers\SendMoneyScreen.cs" />
+        <Compile Include="Controllers\SendMoneyScreen.designer.cs">
+          <DependentUpon>SendMoneyScreen.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Controllers\TipMyselfScreen.cs" />
+        <Compile Include="Controllers\TipMyselfScreen.designer.cs">
+          <DependentUpon>TipMyselfScreen.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Models\BanksPickerModel.cs" />
+        <Compile Include="Utils\NetworkUtil.cs" />
+        <Compile Include="Models\DTO.cs" />
+        <Compile Include="Models\TMChoicePickerModel.cs" />
+        <Compile Include="Models\TMPickerModel.cs" />
+        <Compile Include="Controllers\SignupScreen.cs" />
+        <Compile Include="Controllers\SignupScreen.designer.cs">
+          <DependentUpon>SignupScreen.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Controllers\SignupSuccessScreen.cs" />
+        <Compile Include="Controllers\SignupSuccessScreen.designer.cs">
+          <DependentUpon>SignupSuccessScreen.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Models\Transactions.cs" />
+        <Compile Include="TableSources\TransactionTableSource.cs" />
+        <Compile Include="Controllers\TransactionScreen.cs" />
+        <Compile Include="Controllers\TransactionScreen.designer.cs">
+          <DependentUpon>TransactionScreen.cs</DependentUpon>
+        </Compile>
+        <Compile Include="ModelViews\CustomTransactionCell.cs" />
+        <Compile Include="ModelViews\CustomTransactionCell.designer.cs">
+          <DependentUpon>CustomTransactionCell.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Utils\MemoryManager.cs" />
+        <Compile Include="ScrollViewPage.cs" />
+        <Compile Include="ScrollViewPage.designer.cs">
+          <DependentUpon>ScrollViewPage.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Test1.cs" />
+        <Compile Include="Test1.designer.cs">
+          <DependentUpon>Test1.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Utils\Util.cs" />
+        <Compile Include="Controllers\ToTransferSuccess.cs" />
+        <Compile Include="Controllers\ToTransferSuccess.designer.cs">
+          <DependentUpon>ToTransferSuccess.cs</DependentUpon>
+        </Compile>
+        <Compile Include="segmentedControl\SetTitleTextAttributes.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <BundleResource Include="Resources\.DS_Store" />
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

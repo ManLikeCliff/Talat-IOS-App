@@ -1,0 +1,74 @@
+Function=SystemNative_ConvertErrorPlatformToPal
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ConvertErrorPalToPlatform
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_StrErrorR
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetNonCryptographicallySecureRandomBytes
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetReadDirRBufferSize
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetEGid
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetEUid
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_MkDir
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Stat2
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_LStat2
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Unlink
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_OpenDir
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ReadDirR
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_CloseDir
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_timezone_get_local_name
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_timezone_get_data
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_log
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/mscorlib.dll
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_release_managed_ref
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_set_gchandle_with_flags_safe
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=UIApplicationMain
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_find_protocol_wrapper_type
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_release_block_on_main_thread
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=NetSecurityNative_ReleaseGssBuffer
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DisplayMinorStatus
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DisplayMajorStatus
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ImportUserName
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ImportPrincipalName
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ReleaseName
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitiateCredSpNego
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitiateCredWithPassword
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ReleaseCred
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitSecContext
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DeleteSecContext
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=xamarin_start_wwan
+	/Users/wemabank/Desktop/Talat/Talat/obj/iPhone/Debug/device-builds/iphone11.8-15.2/mtouch-cache/1-Link/System.dll
+Function=mono_pmip
