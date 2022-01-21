@@ -18,18 +18,6 @@
 /Users/wemabank/Projects/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.exe
 /Users/wemabank/Projects/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.pdb
 /Users/wemabank/Projects/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.csproj.AssemblyReference.cache
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/actool/_PartialAppManifest.items
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/actool/_BundleResourceWithLogicalName.items
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/actool/_ProcessedImageAssetsPath.items
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/ibtool/_BundleResourceWithLogicalName.items
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/ibtool/_ProcessedInterfaceDefinitionsPath.items
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/coremlc/_PartialAppManifest.items
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/coremlc/_BundleResourceWithLogicalName.items
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/coremlc/_ProcessedCoreMLModelsPath.items
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/_ProcessedBundleResourcesPath.items
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/_ProcessedContentPath.items
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/optimized/
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.csproj.CoreCompileInputs.cache
 /Users/wemabank/Desktop/Talat/Talat/bin/iPhoneSimulator/Debug/Talat.exe
 /Users/wemabank/Desktop/Talat/Talat/bin/iPhoneSimulator/Debug/Talat.pdb
 /Users/wemabank/Desktop/Talat/Talat/bin/iPhoneSimulator/Debug/System.Net.Http.Formatting.dll
@@ -47,6 +35,18 @@
 /Users/wemabank/Desktop/Talat/Talat/bin/iPhoneSimulator/Debug/Plugin.Connectivity.pdb
 /Users/wemabank/Desktop/Talat/Talat/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
 /Users/wemabank/Desktop/Talat/Talat/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/actool/_PartialAppManifest.items
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/actool/_BundleResourceWithLogicalName.items
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/actool/_ProcessedImageAssetsPath.items
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/ibtool/_BundleResourceWithLogicalName.items
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/ibtool/_ProcessedInterfaceDefinitionsPath.items
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/coremlc/_PartialAppManifest.items
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/coremlc/_BundleResourceWithLogicalName.items
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/coremlc/_ProcessedCoreMLModelsPath.items
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/_ProcessedBundleResourcesPath.items
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/_ProcessedContentPath.items
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/device-builds/iphone 11 pro max-15.2/optimized/
+/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.csproj.CoreCompileInputs.cache
 /Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.csproj.CopyComplete
 /Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.exe
 /Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.pdb

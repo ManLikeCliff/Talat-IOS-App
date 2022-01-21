@@ -61,6 +61,9 @@ namespace Talat
 		UIKit.UILabel sendMoneyAccountLabel { get; set; }
 
 		[Outlet]
+		UIKit.UIActivityIndicatorView sendMoneyLoader { get; set; }
+
+		[Outlet]
 		UIKit.UIStackView sendMoneyRestView { get; set; }
 
 		[Outlet]
@@ -76,16 +79,6 @@ namespace Talat
 			if (banksTextField != null) {
 				banksTextField.Dispose ();
 				banksTextField = null;
-			}
-
-			if (sendMoneyAccountLabel != null) {
-				sendMoneyAccountLabel.Dispose ();
-				sendMoneyAccountLabel = null;
-			}
-
-			if (userAmountLabel != null) {
-				userAmountLabel.Dispose ();
-				userAmountLabel = null;
 			}
 
 			if (beneficiaryBtn != null) {
@@ -153,9 +146,24 @@ namespace Talat
 				recipientLabel = null;
 			}
 
+			if (sendMoneyAccountLabel != null) {
+				sendMoneyAccountLabel.Dispose ();
+				sendMoneyAccountLabel = null;
+			}
+
 			if (sendMoneyRestView != null) {
 				sendMoneyRestView.Dispose ();
 				sendMoneyRestView = null;
+			}
+
+			if (userAmountLabel != null) {
+				userAmountLabel.Dispose ();
+				userAmountLabel = null;
+			}
+
+			if (sendMoneyLoader != null) {
+				sendMoneyLoader.Dispose ();
+				sendMoneyLoader = null;
 			}
 		}
 	}

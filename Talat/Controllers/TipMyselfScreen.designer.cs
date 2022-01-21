@@ -16,6 +16,9 @@ namespace Talat
 		UIKit.UISwitch showRestTMSwitch { get; set; }
 
 		[Outlet]
+		UIKit.UITableView tipTransactionTableView { get; set; }
+
+		[Outlet]
 		UIKit.UITextField TMPercentageValue { get; set; }
 
 		[Outlet]
@@ -26,14 +29,14 @@ namespace Talat
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (showRestTMSwitch != null) {
+				showRestTMSwitch.Dispose ();
+				showRestTMSwitch = null;
+			}
+
 			if (TMPercentageValue != null) {
 				TMPercentageValue.Dispose ();
 				TMPercentageValue = null;
-			}
-
-			if (WhenToGetTipped != null) {
-				WhenToGetTipped.Dispose ();
-				WhenToGetTipped = null;
 			}
 
 			if (TMRestView != null) {
@@ -41,9 +44,14 @@ namespace Talat
 				TMRestView = null;
 			}
 
-			if (showRestTMSwitch != null) {
-				showRestTMSwitch.Dispose ();
-				showRestTMSwitch = null;
+			if (WhenToGetTipped != null) {
+				WhenToGetTipped.Dispose ();
+				WhenToGetTipped = null;
+			}
+
+			if (tipTransactionTableView != null) {
+				tipTransactionTableView.Dispose ();
+				tipTransactionTableView = null;
 			}
 		}
 	}

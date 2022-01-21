@@ -120,16 +120,22 @@ namespace Talat
         {
             loginLoading.StartAnimating();
 
+            LoginToDashboard.UserInteractionEnabled = false;
+
+            //UIApplication.SharedApplication.BeginIgnoringInteractionEvents();
+
             //await Task.Delay(5000);
 
             ValidateLogin(EmailTextView, PasswordTextView);
-            
         }
 
 
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
+
+            
+
             base.PrepareForSegue(segue, sender);
            
            if(segue.DestinationViewController is DashboardScreen)
@@ -147,6 +153,7 @@ namespace Talat
 
         private async void ValidateLogin(UITextField email, UITextField password)
         {
+            
             if (!checkEmpty(email.Text.ToString()) && !checkEmpty(password.Text.ToString()))
             {
                 LoginModel loginModel = new LoginModel() { email = email.Text.ToString(), password = password.Text.ToString() };
@@ -175,6 +182,11 @@ namespace Talat
                     uIAlert.AddAction(okAction);
 
                     PresentViewController(uIAlert, true, null);
+
+                    loginLoading.StopAnimating();
+
+                    LoginToDashboard.UserInteractionEnabled = true;
+
                 }
             }
             else {
@@ -184,10 +196,12 @@ namespace Talat
                 uIAlert.AddAction(okAction);
 
                 PresentViewController(uIAlert, true, null);
-                     
-            }
-            
 
+                loginLoading.StopAnimating();
+
+                LoginToDashboard.UserInteractionEnabled = true;
+
+            }
         }
 
 

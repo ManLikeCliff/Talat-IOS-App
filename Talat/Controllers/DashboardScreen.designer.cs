@@ -22,13 +22,31 @@ namespace Talat
 		UIKit.UILabel accNumberLabel { get; set; }
 
 		[Outlet]
-		UIKit.UIPageControl dashPC { get; set; }
+		UIKit.UIButton dashCopyClipboard { get; set; }
+
+		[Outlet]
+		UIKit.UIImageView dashFirstCard { get; set; }
+
+		[Outlet]
+		UIKit.UIPageControl dashPageControl { get; set; }
+
+		[Outlet]
+		UIKit.UIImageView dashSecondView { get; set; }
 
 		[Outlet]
 		UIKit.UIScrollView dashSV { get; set; }
 
 		[Outlet]
-		UIKit.UIView dashV { get; set; }
+		UIKit.UIView dashView { get; set; }
+
+		[Outlet]
+		UIKit.UILabel tipBalanceLabel { get; set; }
+
+		[Outlet]
+		UIKit.UILabel tipPercentageLabel { get; set; }
+
+		[Outlet]
+		UIKit.UILabel tipStatusLabel { get; set; }
 
 		[Outlet]
 		UIKit.UIButton toTransactionPage { get; set; }
@@ -50,9 +68,24 @@ namespace Talat
 				accNumberLabel = null;
 			}
 
-			if (dashPC != null) {
-				dashPC.Dispose ();
-				dashPC = null;
+			if (dashCopyClipboard != null) {
+				dashCopyClipboard.Dispose ();
+				dashCopyClipboard = null;
+			}
+
+			if (dashFirstCard != null) {
+				dashFirstCard.Dispose ();
+				dashFirstCard = null;
+			}
+
+			if (dashPageControl != null) {
+				dashPageControl.Dispose ();
+				dashPageControl = null;
+			}
+
+			if (dashSecondView != null) {
+				dashSecondView.Dispose ();
+				dashSecondView = null;
 			}
 
 			if (dashSV != null) {
@@ -60,14 +93,29 @@ namespace Talat
 				dashSV = null;
 			}
 
-			if (dashV != null) {
-				dashV.Dispose ();
-				dashV = null;
+			if (dashView != null) {
+				dashView.Dispose ();
+				dashView = null;
 			}
 
 			if (toTransactionPage != null) {
 				toTransactionPage.Dispose ();
 				toTransactionPage = null;
+			}
+
+			if (tipBalanceLabel != null) {
+				tipBalanceLabel.Dispose ();
+				tipBalanceLabel = null;
+			}
+
+			if (tipPercentageLabel != null) {
+				tipPercentageLabel.Dispose ();
+				tipPercentageLabel = null;
+			}
+
+			if (tipStatusLabel != null) {
+				tipStatusLabel.Dispose ();
+				tipStatusLabel = null;
 			}
 		}
 	}

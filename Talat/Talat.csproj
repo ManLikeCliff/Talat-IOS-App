@@ -315,6 +315,18 @@
         <ImageAsset Include="Resources\Assets.xcassets\Success pop-up.imageset\Success pop-up.png" />
         <ImageAsset Include="Resources\Assets.xcassets\Success pop-up.imageset\Contents.json" />
         <ImageAsset Include="Resources\Assets.xcassets\Success pop-up.imageset\Success pop-up%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Dashboard Tip Wallet.imageset\Dashboard Tip Wallet.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Dashboard Tip Wallet.imageset\Dashboard Tip Wallet%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Dashboard Tip Wallet.imageset\Dashboard Tip Wallet%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Dashboard Tip Wallet.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\clipboardIcon.imageset\clipboardIcon%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\clipboardIcon.imageset\clipboardIcon%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\clipboardIcon.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\clipboardIcon.imageset\clipboardIcon.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\homeIcon.imageset\homeIcon.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\homeIcon.imageset\homeIcon%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\homeIcon.imageset\homeIcon%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\homeIcon.imageset\Contents.json" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\" />
@@ -401,6 +413,12 @@
           <DependentUpon>ToTransferSuccess.cs</DependentUpon>
         </Compile>
         <Compile Include="segmentedControl\SetTitleTextAttributes.cs" />
+        <Compile Include="ModelViews\CustomTipTransactionCell.cs" />
+        <Compile Include="ModelViews\CustomTipTransactionCell.designer.cs">
+          <DependentUpon>CustomTipTransactionCell.cs</DependentUpon>
+        </Compile>
+        <Compile Include="TableSources\TipTransactionTableSource.cs" />
+        <Compile Include="Models\TipTransactions.cs" />
     </ItemGroup>
     <ItemGroup>
       <BundleResource Include="Resources\.DS_Store" />

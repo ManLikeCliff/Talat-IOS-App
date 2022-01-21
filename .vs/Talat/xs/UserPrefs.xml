@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{61467A79-2C2F-4917-BB72-A2C1BA44341C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Talat/Controllers/SendMoneyScreen.cs">
+    <Files>
+      <File FileName="Talat/Controllers/TipMyselfScreen.cs" Line="45" Column="27" />
+      <File FileName="Talat/Controllers/TransactionScreen.cs" />
+      <File FileName="Talat/Models/Transactions.cs" />
+      <File FileName="Talat/Models/TipTransactions.cs" />
+      <File FileName="Talat/ModelViews/CustomTransactionCell.cs" />
+      <File FileName="Talat/ModelViews/CustomTipTransactionCell.cs" />
+      <File FileName="Talat/TableSources/TransactionTableSource.cs" />
+      <File FileName="Talat/TableSources/TipTransactionTableSource.cs" />
+      <File FileName="Talat/Controllers/LoginScreen.cs" />
+      <File FileName="Talat/Models/DTO.cs" />
+      <File FileName="Talat/Utils/MemoryManager.cs" />
+      <File FileName="Talat/Controllers/DashboardScreen.cs" Line="69" Column="1" />
+      <File FileName="Talat/Utils/Util.cs" Line="1" Column="1" />
+      <File FileName="Talat/Utils/NetworkUtil.cs" Line="1" Column="1" />
+      <File FileName="Talat/Controllers/SendMoneyScreen.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Talat" expanded="True">
+            <Node name="Talat" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="SendMoneyScreen.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="ModelViews" expanded="True" />
+              <Node name="TableSources" expanded="True" />
+              <Node name="Utils" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Talat PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.29D395D0-3A79-4AA8-B9CB-B5C32FC4B1C6" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

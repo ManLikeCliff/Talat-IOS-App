@@ -32,9 +32,18 @@ namespace Talat
         {
             base.ViewDidLoad();
 
+            NavigationItem.HidesBackButton = true;
+
+            Title = "Transaction History";
+
+            transLoader.Hidden = false;
+            transLoader.StartAnimating();
+
+            toDashboardBtn.Clicked += ToDashboardBtn_Clicked;
+
             //segmentedControl.AddTarget(this, "", UIControlEvent.ValueChanged);
 
-           
+
 
             transactionTableView.Source = new TransactionTableSource(transactions);
 
@@ -43,6 +52,18 @@ namespace Talat
             //GetTransactions().Wait(200);
             firstTab();
             segmentedControl.ValueChanged += SegmentedControl_ValueChanged;
+        }
+
+        private void ToDashboardBtn_Clicked(object sender, EventArgs e)
+        {
+            foreach (var vc in NavigationController.ViewControllers)
+            {
+                if (vc is DashboardScreen)
+                {
+                    NavigationController?.PopToViewController(vc, animated: true);
+
+                }
+            }
         }
 
         private void SegmentedControl_ValueChanged(object sender, EventArgs e)
@@ -132,23 +153,24 @@ namespace Talat
 
         private async void firstTab()
         {
-                var user = MemoryManager.getUseAccountLogin("user_key");
+            var user = MemoryManager.getUseAccountLogin("user_key");
+            {
+                if (user != null)
                 {
-                    if (user != null)
+                    var reult = await NetworkUtil.GetQueryAsyc("Transactions/TransactionHistory", user.acctNumber, "AcctNumber");
+                    if (!string.IsNullOrEmpty(reult))
                     {
-                        var reult = await NetworkUtil.GetQueryAsyc("Transactions/TransactionHistory", user.acctNumber, "AcctNumber");
-                        if (!string.IsNullOrEmpty(reult))
-                        {
-                        Transactions[] gottenTransactions = JsonConvert.DeserializeObject<Transactions[]>(reult);
+                    Transactions[] gottenTransactions = JsonConvert.DeserializeObject<Transactions[]>(reult);
 
-                        foreach (Transactions transaction in gottenTransactions)
-                        {
-                            transactions.Add(transaction);
-                        }
+                    foreach (Transactions transaction in gottenTransactions)
+                    {
+                        transactions.Add(transaction);
+                    }
+                        transLoader.StopAnimating();
                         transactionTableView.ReloadData();
                     }
-                    }
                 }
+            }
         }
 
         private async void secondTab()

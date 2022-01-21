@@ -13,24 +13,20 @@ namespace Talat
 		{
 		}
 
-        //public override void ViewDidLoad()
-        //{
-        //    base.ViewDidLoad();
-
-        //    myScroll.ContentSize = myView.Frame.Size;
-
-        //    myScroll.Scrolled += (sender, e) =>
-        //    {
-        //        myPager.CurrentPage = (nint)(myScroll.ContentOffset.X / myScroll.Frame.Width);
-        //    };
-        //}
-
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             myScroll.ContentSize = myView.Frame.Size;
             myScroll.Scrolled += (sender, e) => {
                 myPager.CurrentPage = (nint)(myScroll.ContentOffset.X / myScroll.Frame.Width);
+            };
+
+
+
+            secondScroll.ShowsHorizontalScrollIndicator = false;
+            secondScroll.ContentSize = secondView.Frame.Size;
+            secondScroll.Scrolled += (sender, e) => {
+                secondPager.CurrentPage = (nint)(secondScroll.ContentOffset.X / secondScroll.Frame.Width);
             };
             // Perform any additional setup after loading the view, typically from a nib.  
         }

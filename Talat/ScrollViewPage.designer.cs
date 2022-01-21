@@ -22,6 +22,21 @@ namespace Talat
 		UIKit.UIView myView { get; set; }
 
 		[Outlet]
+		UIKit.UIPageControl secondPager { get; set; }
+
+		[Outlet]
+		UIKit.UIImageView secondPic1 { get; set; }
+
+		[Outlet]
+		UIKit.UIImageView secondPic2 { get; set; }
+
+		[Outlet]
+		UIKit.UIScrollView secondScroll { get; set; }
+
+		[Outlet]
+		UIKit.UIView secondView { get; set; }
+
+		[Outlet]
 		UIKit.UILabel Slide1 { get; set; }
 
 		[Outlet]
@@ -60,6 +75,31 @@ namespace Talat
 			if (Slide3 != null) {
 				Slide3.Dispose ();
 				Slide3 = null;
+			}
+
+			if (secondPager != null) {
+				secondPager.Dispose ();
+				secondPager = null;
+			}
+
+			if (secondScroll != null) {
+				secondScroll.Dispose ();
+				secondScroll = null;
+			}
+
+			if (secondView != null) {
+				secondView.Dispose ();
+				secondView = null;
+			}
+
+			if (secondPic1 != null) {
+				secondPic1.Dispose ();
+				secondPic1 = null;
+			}
+
+			if (secondPic2 != null) {
+				secondPic2.Dispose ();
+				secondPic2 = null;
 			}
 		}
 	}

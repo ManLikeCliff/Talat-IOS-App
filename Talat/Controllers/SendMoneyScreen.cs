@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using CoreAnimation;
 using CoreGraphics;
 using Foundation;
@@ -34,6 +35,8 @@ namespace Talat
             base.ViewDidLoad();
 
             Title = "Send Money";
+
+            sendMoneyLoader.HidesWhenStopped = true;
 
             AddBanksField();
             BanksTextField();
@@ -86,7 +89,8 @@ namespace Talat
 
                 SendMoneyToAccount(pinTextField.Text);
 
-
+                sendMoneyLoader.StartAnimating();
+                pinTextField.UserInteractionEnabled = false;
             }
 
             if (pinTextField.Text.Length > 4)
@@ -120,6 +124,9 @@ namespace Talat
 
         public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         {
+            sendMoneyLoader.StopAnimating();
+            pinTextField.UserInteractionEnabled = true;
+
             base.PrepareForSegue(segue, sender);
 
             if (segue.DestinationViewController is ToTransferSuccess)
@@ -151,7 +158,7 @@ namespace Talat
 
                 }
                 else {
-                    Util.showDialog("Alert", "Please try again", this);
+                    Util.showDialog("Please try again", "Invalid Account", this);
                 }
             
         }
@@ -165,10 +172,12 @@ namespace Talat
 
         private void MakeTransferBtn_TouchUpInside(object sender, EventArgs e)
         {
+            var user = MemoryManager.getUseAccountLogin("user_key");
             if (!string.IsNullOrEmpty(amountToSend.Text))
             {
                 pinAmountLabel.Text = "₦" +  amountToSend.Text;
                 pinNameLabel.Text = recipientLabel.Text;
+                pinAccountLabel.Text = user.acctNumber;
 
                 UIView.Transition(pinView, 0.8f, UIViewAnimationOptions.TransitionCrossDissolve, () => { pinView.Hidden = true; }, null);
                 NavigationItem.HidesBackButton = true;
@@ -198,7 +207,9 @@ namespace Talat
         private void BanksTextField()
         {
             var bankList = new List<string> {
-                "FCMB", "WEMA", "First Bank", "Guarantee Trust Bank", "Polaris Bank"
+                "Select Bank", "FCMB", "ALATbyWEMA", "First Bank", "Guarantee Trust Bank", "Polaris Bank",
+                                        "Access Bank", "Fidelity Bank", "Union Bank", "UBA", "Zenith Bank", "Ecobank",
+                                        "Stanbic IBTC", "Sterling Bank", "Providus Bank", "KUDA", "VFD Bank"
             };
 
             var picker = new BanksPickerModel(bankList);

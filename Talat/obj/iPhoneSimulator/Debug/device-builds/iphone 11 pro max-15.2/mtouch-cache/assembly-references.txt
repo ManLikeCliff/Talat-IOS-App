@@ -8,6 +8,8 @@
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.4.0.0/lib/mono/Xamarin.iOS/System.Core.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.4.0.0/lib/mono/Xamarin.iOS/System.Net.Http.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.4.0.0/lib/mono/Xamarin.iOS/Facades/System.Drawing.Common.dll
+/Users/wemabank/.nuget/packages/xamarin.essentials/1.7.0/lib/xamarinios10/Xamarin.Essentials.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/15.4.0.0/lib/mono/Xamarin.iOS/OpenTK-1.0.dll
 /Users/wemabank/.nuget/packages/newtonsoft.json/13.0.1/lib/netstandard2.0/Newtonsoft.Json.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.4.0.0/lib/mono/Xamarin.iOS/Facades/netstandard.dll
 /Library/Frameworks/Xamarin.iOS.framework/Versions/15.4.0.0/lib/mono/Xamarin.iOS/System.Data.dll

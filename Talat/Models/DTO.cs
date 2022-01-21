@@ -51,7 +51,7 @@ namespace Talat.Models
 
     public class WalletDetailsResponse
     {
-        public string walletBalance { get; set; }
+        public decimal walletBalance { get; set; }
         public string acctNumber{ get; set; }
         public int walletId{ get; set; }
         public string tipPercent { get; set; }

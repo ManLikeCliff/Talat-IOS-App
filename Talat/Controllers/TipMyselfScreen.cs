@@ -2,10 +2,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using CoreAnimation;
 using Foundation;
 using Newtonsoft.Json;
 using Talat.Models;
+using Talat.TableSources;
 using Talat.Utils;
 using UIKit;
 
@@ -21,10 +23,13 @@ namespace Talat
         UIPickerView GetTippedPicker = new UIPickerView();
         private string tipPercentage;
 
+        List<TipTransactions> tipTransactions = new List<TipTransactions>();
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             GetWalletStatus();
+            GetWalletHistory();
 
             Title = "Tip Myself Menu";
 
@@ -35,6 +40,28 @@ namespace Talat
 
             AddGetTippedField();
             GetTippedTextField();
+        }
+
+        private async void GetWalletHistory()
+        {
+            var user = MemoryManager.getUseAccountLogin("user_key");
+            {
+                if (user != null)
+                {
+                    var reult = await NetworkUtil.GetQueryAsyc("Transactions/WalletHistory", user.acctNumber, "AcctNumber");
+                    if (!string.IsNullOrEmpty(reult))
+                    {
+                        TipTransactions[] gottenTransactions = JsonConvert.DeserializeObject<TipTransactions[]>(reult);
+
+                        foreach (TipTransactions transaction in gottenTransactions)
+                        {
+                            tipTransactions.Add(transaction);
+                        }
+                        tipTransactionTableView.Source = new TipTransactionTableSource(tipTransactions);
+                        tipTransactionTableView.ReloadData();
+                    }
+                }
+            }
         }
 
         private void ShowRestTMSwitch_ValueChanged(object sender, EventArgs e)
@@ -137,7 +164,7 @@ namespace Talat
             this.NavigationController.NavigationBarHidden = false;
         }
 
-        //Get the current Tip Stattus of the User.
+        //Get the current Tip Status of the User.
         public async void PostTipStatus(bool tipStatus, string percentage)
         {
             if (!string.IsNullOrEmpty(percentage))
@@ -163,7 +190,7 @@ namespace Talat
                 }
             }
             
-        }  //Get the current Tip Stattus of the User.
+        }  //Get the current Tip Status of the User.
         public async void GetWalletStatus()
         {
             var user = MemoryManager.getUseAccountLogin("user_key");
