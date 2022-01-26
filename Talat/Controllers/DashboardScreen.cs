@@ -60,6 +60,8 @@ namespace Talat
             this.NavigationController.NavigationBarHidden = true;
 
             getUserWalletBalance();
+
+            getTipWalletBalance();
         }
 
         public DashboardScreen() : base()
@@ -87,6 +89,38 @@ namespace Talat
                 }
             }
             
+        }
+
+
+        private async void getTipWalletBalance()
+        {
+            var user = MemoryManager.getUseAccountLogin("user_key");
+            {
+                if (user != null)
+                {
+                    var reult = await NetworkUtil.GetQueryAsyc("Users/WalletDetail", user.acctNumber, "acctNumber");
+                    if (!string.IsNullOrEmpty(reult))
+                    {
+                        var result = JsonConvert.DeserializeObject<LoginResponse>(reult);
+                        if (result != null)
+                        {
+                            TipShaerd tipShaerd = new TipShaerd() { percent = result.tipPercent, status = result.tipStatus };
+
+                            MemoryManager.setSuccessScreenTipStatus(tipShaerd, "tip_key");
+
+                            tipBalanceLabel.Text = "₦" + result.walletBalance.ToString("N0");
+                            tipPercentageLabel.Text = $"{result.tipPercent}%";
+                            if (result.tipStatus) {
+                                tipStatusLabel.Text = "ACTIVE";
+                            }
+                            else { tipStatusLabel.Text = "IN-ACTIVE"; }
+                            MemoryManager.setUserAccountLog(result, "user_key");
+                        }
+
+                    }
+                }
+            }
+
         }
     }
 }

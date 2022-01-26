@@ -28,7 +28,18 @@ namespace Talat
 			referenceLabel.Text = refID;
         }
 
-		
+        public override void PrepareForReuse()
+        {
+            base.PrepareForReuse();
 
-	}
+			amountLabel.Text = null;
+			recipientLabel.Text = null;
+			senderLabel.Text = null;
+			dateLabel.Text = null;
+			referenceLabel.Text = null;
+		}
+
+
+
+    }
 }

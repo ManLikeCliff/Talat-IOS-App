@@ -14,12 +14,21 @@ namespace Talat.Models
         public string password { get; set; }
     }
 
+    public class TipShaerd
+    {
+        public string percent { get; set; }
+        public bool status { get; set; }
+    }
     public class LoginResponse
     {
         public string acctNumber { get; set; }
         public string acctName { get; set; }
         public string email { get; set; }
-        public double acctBalance { get; set; }
+        public decimal acctBalance { get; set; }
+
+        public decimal walletBalance { get; set; }
+        public string tipPercent { get; set; }
+        public bool tipStatus { get; set; }
     }
 
     public class SignupModel

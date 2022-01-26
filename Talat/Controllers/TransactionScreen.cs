@@ -21,6 +21,7 @@ namespace Talat
         public string accNumber;
 
         List<Transactions> transactions = new List<Transactions>();
+        List<TipTransactions> tipTransactions = new List<TipTransactions>();
 
         HttpClient client;
 
@@ -45,7 +46,7 @@ namespace Talat
 
 
 
-            transactionTableView.Source = new TransactionTableSource(transactions);
+            //transactionTableView.Source = new TransactionTableSource(transactions);
 
             UISegmentedControl.Appearance.SetTitleTextAttributes(new UITextAttributes { TextColor = UIColor.White }, UIControlState.Selected);
 
@@ -75,7 +76,8 @@ namespace Talat
                     firstTab();
                     break;
                 case 1:
-                    secondTab();
+                    //secondTab();
+                    GetWalletHistory();
                     break;
             }
         }
@@ -150,6 +152,36 @@ namespace Talat
 
         }
 
+        private async void GetWalletHistory()
+        {
+            var user = MemoryManager.getUseAccountLogin("user_key");
+            {
+                if (user != null)
+                {
+                    var reult = await NetworkUtil.GetQueryAsyc("Transactions/WalletHistory", user.acctNumber, "AcctNumber");
+                    if (!string.IsNullOrEmpty(reult))
+                    {
+                        TipTransactions[] gottenTransactions = JsonConvert.DeserializeObject<TipTransactions[]>(reult);
+
+                        tipTransactions = new List<TipTransactions>();
+
+                        tipTransactionTableView.Source = new TipTransactionTableSource(tipTransactions);
+
+                        foreach (TipTransactions transaction in gottenTransactions)
+                        {
+                            tipTransactions.Add(transaction);
+                        }
+                        transactionTableView.Hidden = true;
+
+                        tipTransactionTableView.Hidden = false;
+
+                        //tipTransactionTableView.Source = new TipTransactionTableSource(tipTransactions);
+                        tipTransactionTableView.ReloadData();
+                    }
+                }
+            }
+        }
+
 
         private async void firstTab()
         {
@@ -162,10 +194,20 @@ namespace Talat
                     {
                     Transactions[] gottenTransactions = JsonConvert.DeserializeObject<Transactions[]>(reult);
 
+                        transactions = new List<Transactions>();
+
+                        transactionTableView.Source = new TransactionTableSource(transactions);
+
                     foreach (Transactions transaction in gottenTransactions)
                     {
                         transactions.Add(transaction);
                     }
+                        transactionTableView.Hidden = false;
+
+                        tipTransactionTableView.Hidden = true;
+
+                        //transactions.RemoveAll();
+
                         transLoader.StopAnimating();
                         transactionTableView.ReloadData();
                     }
@@ -173,29 +215,30 @@ namespace Talat
             }
         }
 
-        private async void secondTab()
-        {
+        //private async void secondTab()
+        //{
 
-            Util.showDialog("UI Left", "Endpoint Consumed Already..", this);
+        //    //  Util.showDialog("UI Left", "Endpoint Consumed Already..", this);
 
-           // var user = MemoryManager.getUseAccountLogin("user_key");
-            //{
-              //  if (user != null)
-               // {
-                 //   var reult = await NetworkUtil.GetQueryAsyc("Transactions/WalletHistory", user.acctNumber, "AcctNumber");
-                   // if (!string.IsNullOrEmpty(reult))
-                    //{
-                      //  Transactions[] gottenTransactions = JsonConvert.DeserializeObject<Transactions[]>(reult);
+        //    var user = MemoryManager.getUseAccountLogin("user_key");
+        //    {
+        //        if (user != null)
+        //        {
+        //            var reult = await NetworkUtil.GetQueryAsyc("Transactions/WalletHistory", user.acctNumber, "AcctNumber");
+        //            if (!string.IsNullOrEmpty(reult))
+        //            {
+        //                Transactions[] gottenTransactions = JsonConvert.DeserializeObject<Transactions[]>(reult);
 
-                        //foreach (Transactions transaction in gottenTransactions)
-                        //{
-                          //  transactions.Add(transaction);
-                        //}
-                      //  transactionTableView.Source = new TransactionTableSource(transactions,1);
-                      //  transactionTableView.ReloadData();
-                 //   }
-                //}
-            //}
-        }
+        //                foreach (Transactions transaction in gottenTransactions)
+        //                {
+        //                    transactions.Add(transaction);
+        //                }
+        //                transactionTableView.Source = new TransactionTableSource(transactions);
+        //                transactionTableView.ReloadData();
+        //            }
+        //        }
+        //    }
+            
+        //}
     }
 }

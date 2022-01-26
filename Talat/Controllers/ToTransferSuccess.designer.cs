@@ -13,16 +13,30 @@ namespace Talat
 	partial class ToTransferSuccess
 	{
 		[Outlet]
+		UIKit.UIView toSuccessRestView { get; set; }
+
+		[Outlet]
 		UIKit.UILabel transferSuccessAccName { get; set; }
 
 		[Outlet]
 		UIKit.UILabel transferSuccessAmount { get; set; }
 
 		[Outlet]
+		UIKit.UILabel transferSuccessTipAmount { get; set; }
+
+		[Outlet]
+		UIKit.UILabel transferSuccessTipPercent { get; set; }
+
+		[Outlet]
 		UIKit.UIButton transferSuccessToDashboard { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (transferSuccessAccName != null) {
+				transferSuccessAccName.Dispose ();
+				transferSuccessAccName = null;
+			}
+
 			if (transferSuccessAmount != null) {
 				transferSuccessAmount.Dispose ();
 				transferSuccessAmount = null;
@@ -33,9 +47,19 @@ namespace Talat
 				transferSuccessToDashboard = null;
 			}
 
-			if (transferSuccessAccName != null) {
-				transferSuccessAccName.Dispose ();
-				transferSuccessAccName = null;
+			if (transferSuccessTipAmount != null) {
+				transferSuccessTipAmount.Dispose ();
+				transferSuccessTipAmount = null;
+			}
+
+			if (transferSuccessTipPercent != null) {
+				transferSuccessTipPercent.Dispose ();
+				transferSuccessTipPercent = null;
+			}
+
+			if (toSuccessRestView != null) {
+				toSuccessRestView.Dispose ();
+				toSuccessRestView = null;
 			}
 		}
 	}

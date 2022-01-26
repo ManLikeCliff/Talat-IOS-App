@@ -1,21 +1,15 @@
 ﻿<Properties StartupConfiguration="{61467A79-2C2F-4917-BB72-A2C1BA44341C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Talat/Controllers/SendMoneyScreen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Talat/Controllers/DashboardScreen.cs">
     <Files>
-      <File FileName="Talat/Controllers/TipMyselfScreen.cs" Line="45" Column="27" />
-      <File FileName="Talat/Controllers/TransactionScreen.cs" />
-      <File FileName="Talat/Models/Transactions.cs" />
-      <File FileName="Talat/Models/TipTransactions.cs" />
-      <File FileName="Talat/ModelViews/CustomTransactionCell.cs" />
+      <File FileName="Talat/Controllers/TipMyselfScreen.cs" Line="185" Column="1" />
+      <File FileName="Talat/Controllers/SendMoneyScreen.cs" />
       <File FileName="Talat/ModelViews/CustomTipTransactionCell.cs" />
-      <File FileName="Talat/TableSources/TransactionTableSource.cs" />
-      <File FileName="Talat/TableSources/TipTransactionTableSource.cs" />
+      <File FileName="Talat/Controllers/ToTransferSuccess.cs" />
+      <File FileName="Talat/Controllers/DashboardScreen.cs" Line="90" Column="13" />
+      <File FileName="Talat/Utils/MemoryManager.cs" />
+      <File FileName="Talat/Main.cs" />
       <File FileName="Talat/Controllers/LoginScreen.cs" />
       <File FileName="Talat/Models/DTO.cs" />
-      <File FileName="Talat/Utils/MemoryManager.cs" />
-      <File FileName="Talat/Controllers/DashboardScreen.cs" Line="69" Column="1" />
-      <File FileName="Talat/Utils/Util.cs" Line="1" Column="1" />
-      <File FileName="Talat/Utils/NetworkUtil.cs" Line="1" Column="1" />
-      <File FileName="Talat/Controllers/SendMoneyScreen.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,7 +17,11 @@
           <Node name="Talat" expanded="True">
             <Node name="Talat" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="SendMoneyScreen.cs" selected="True" />
+                <Node name="DashboardScreen.cs" selected="True" />
+                <Node name="LoginScreen.cs" expanded="True" />
+                <Node name="SendMoneyScreen.cs" expanded="True" />
+                <Node name="SignupSuccessScreen.cs" expanded="True" />
+                <Node name="TipMyselfScreen.cs" expanded="True" />
               </Node>
               <Node name="Models" expanded="True" />
               <Node name="ModelViews" expanded="True" />

@@ -38,6 +38,7 @@ namespace Talat
 
             sendMoneyLoader.HidesWhenStopped = true;
 
+            GetWalletStatus();
             AddBanksField();
             BanksTextField();
             sendMoney = new SendMoneyClass();
@@ -52,6 +53,8 @@ namespace Talat
 
             beneficiaryBtn.TouchUpInside += BeneficiaryBtn_TouchUpInside;
 
+            amountToSend.EditingChanged += AmountToSend_EditingChanged;
+
             makeTransferBtn.TouchUpInside += MakeTransferBtn_TouchUpInside;
 
             pinCancelBtn.TouchUpInside += PinCancelBtn_TouchUpInside;
@@ -60,6 +63,32 @@ namespace Talat
 
             pinTextField.EditingChanged += EnterPin_EditingChanged;
 
+            showRestSMSwitch.ValueChanged += ShowRestSMSwitch_ValueChanged;
+
+        }
+
+        private void ShowRestSMSwitch_ValueChanged(object sender, EventArgs e)
+        {
+            if (!showRestSMSwitch.On && !sendMoneyRestView.Hidden)
+            {
+                PostTipStatus(false, 0.ToString());
+            }
+
+
+            //if (showRestSMSwitch.On)
+            //    sendMoneyRestView.Hidden = false;
+            //else
+            //    sendMoneyRestView.Hidden = true;
+        }
+
+        private void AmountToSend_EditingChanged(object sender, EventArgs e)
+        {
+            double i = 0;
+            if (double.TryParse(amountToSend.Text, out i))
+            {
+                double tempAmount = double.Parse(amountToSend.Text);
+                amountToSend.Text = tempAmount.ToString("N0");
+            }
         }
 
         private void EnterAccNum_EditingChanged(object sender, EventArgs e)
@@ -255,6 +284,59 @@ namespace Talat
             base.ViewWillAppear(animated);
 
             this.NavigationController.NavigationBarHidden = false;
+        }
+
+        public async void PostTipStatus(bool tipStatus, string percentage)
+        {
+            if (!string.IsNullOrEmpty(percentage))
+            {
+                string newP = percentage.Replace("%", "");
+                TipPostingClass tipPostingClass = new TipPostingClass() { tipPercent = newP, tipStatus = tipStatus };
+                var user = MemoryManager.getUseAccountLogin("user_key");
+                if (user != null)
+                {
+                    string raw = JsonConvert.SerializeObject(tipPostingClass);
+                    var result = await NetworkUtil.PostGeneralQueryAsyc("TipWallet/ActivateStatus", raw, user.acctNumber, "acctNum");
+                    if (!string.IsNullOrEmpty(result))
+                    {
+                        var data = JsonConvert.DeserializeObject<WalletDetailsResponse>(result);
+                        if (data != null)
+                        {
+                            showRestSMSwitch.On = data.tipStatus;
+                            TipShaerd tipShaerd = new TipShaerd() { percent = data.tipPercent, status = data.tipStatus };
+                            MemoryManager.setSuccessScreenTipStatus(tipShaerd, "tip_key");
+
+                            //Do anything with the response data.
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+
+        public async void GetWalletStatus()
+        {
+            var user = MemoryManager.getUseAccountLogin("user_key");
+            if (user != null)
+            {
+                var result = await NetworkUtil.GetQueryAsyc("Users/WalletDetail", user.acctNumber, "acctNumber");
+                if (!string.IsNullOrEmpty(result))
+                {
+                    var mData = JsonConvert.DeserializeObject<WalletDetailsResponse>(result);
+                    if (mData != null)
+                    {
+                        ///Here we are setting the users Default state
+                        showRestSMSwitch.On = mData.tipStatus;
+                        if (mData.tipStatus)
+                        {
+                            sendMoneyRestView.Hidden = true;
+                        }
+                    }
+                }
+
+            }
         }
     }
 }

@@ -16,6 +16,9 @@ namespace Talat
 		UIKit.UISegmentedControl segmentedControl { get; set; }
 
 		[Outlet]
+		UIKit.UITableView tipTransactionTableView { get; set; }
+
+		[Outlet]
 		UIKit.UIBarButtonItem toDashboardBtn { get; set; }
 
 		[Outlet]
@@ -38,6 +41,11 @@ namespace Talat
 			if (segmentedControl != null) {
 				segmentedControl.Dispose ();
 				segmentedControl = null;
+			}
+
+			if (toDashboardBtn != null) {
+				toDashboardBtn.Dispose ();
+				toDashboardBtn = null;
 			}
 
 			if (transactionTableView != null) {
@@ -65,9 +73,9 @@ namespace Talat
 				transLoader = null;
 			}
 
-			if (toDashboardBtn != null) {
-				toDashboardBtn.Dispose ();
-				toDashboardBtn = null;
+			if (tipTransactionTableView != null) {
+				tipTransactionTableView.Dispose ();
+				tipTransactionTableView = null;
 			}
 		}
 	}

@@ -20,10 +20,16 @@ namespace Talat
 
         public void PopulateCell(decimal amount, decimal tipAmount, string tipPercent, string date)
         {
-			tippedTransAmount.Text = "₦" + amount.ToString("N0");
-			tippedAmount.Text = "₦" + tipAmount.ToString("N0");
-            tippedPercent.Text = tipPercent + "%";
-			tippedDate.Text = DateTime.Parse(date).ToString("MM/dd/yyyy hh:mm tt");
+			//tippedTransAmount.Text = "₦" + amount.ToString("N0");
+			//tippedAmount.Text = "₦" + tipAmount.ToString("N0");
+   //         tippedPercent.Text = tipPercent + "%";
+			//tippedDate.Text = DateTime.Parse(date).ToString("MM/dd/yyyy hh:mm tt");
+
+
+			tippedTransAmountLbl.Text = "₦" + amount.ToString("N0");
+			tippedAmountLbl.Text = "₦" + tipAmount.ToString("N0");
+			tippedPercentLbl.Text = tipPercent + "%";
+			tippedDateLbl.Text = DateTime.Parse(date).ToString("MM/dd/yyyy hh:mm tt");
 		}
     }
 }

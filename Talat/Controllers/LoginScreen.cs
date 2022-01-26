@@ -10,6 +10,7 @@ using Talat.Utils;
 using CoreFoundation;
 using Newtonsoft.Json;
 using Talat.Models;
+using Xamarin.Essentials;
 
 namespace Talat
 {
@@ -41,11 +42,11 @@ namespace Talat
                 EmailTextView.Text = defaultEmail;
             }
 
-            var defaultPassword = NSUserDefaults.StandardUserDefaults.StringForKey("Password");
-            if (defaultPassword != null)
-            {
-                PasswordTextView.Text = defaultPassword;
-            }
+            //var defaultPassword = NSUserDefaults.StandardUserDefaults.StringForKey("Password");
+            //if (defaultPassword != null)
+            //{
+            //    PasswordTextView.Text = defaultPassword;
+            //}
 
             LoginToDashboard.Enabled = true;
 
@@ -176,8 +177,8 @@ namespace Talat
                 }
                 else
                 {
-                    UIAlertController uIAlert = UIAlertController.Create("Hahaha", "Invalid Username or Password", UIAlertControllerStyle.Alert);
-                    var okAction = UIAlertAction.Create("No vex boss", UIAlertActionStyle.Default, null);
+                    UIAlertController uIAlert = UIAlertController.Create("Error", "Invalid Username or Password", UIAlertControllerStyle.Alert);
+                    var okAction = UIAlertAction.Create("Okay", UIAlertActionStyle.Default, null);
 
                     uIAlert.AddAction(okAction);
 
@@ -190,7 +191,7 @@ namespace Talat
                 }
             }
             else {
-                UIAlertController uIAlert = UIAlertController.Create("Error", "Fields cannot be empty",UIAlertControllerStyle.Alert);
+                UIAlertController uIAlert = UIAlertController.Create("Alert!", "Fields cannot be empty",UIAlertControllerStyle.Alert);
                 var okAction = UIAlertAction.Create("Okay", UIAlertActionStyle.Default, null);
 
                 uIAlert.AddAction(okAction);

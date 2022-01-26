@@ -10,7 +10,7 @@ namespace Talat.TableSources
     {
 
         List<Transactions> TableItems;
-        int segMentIndex;
+        //int segMentIndex;
 
         public TransactionTableSource(List<Transactions> tableItems)
         {
@@ -42,10 +42,10 @@ namespace Talat.TableSources
             return TableItems.Count;
         }
 
-        public void swapData(List<Transactions> transactions,int segMentINdex)
-        {
+        //public void swapData(List<Transactions> transactions,int segMentINdex)
+        //{
 
-        }
+        //}
 
         public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
         {

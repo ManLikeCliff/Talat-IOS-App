@@ -23,13 +23,13 @@ namespace Talat
         UIPickerView GetTippedPicker = new UIPickerView();
         private string tipPercentage;
 
-        List<TipTransactions> tipTransactions = new List<TipTransactions>();
+        //List<TipTransactions> tipTransactions = new List<TipTransactions>();
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             GetWalletStatus();
-            GetWalletHistory();
+            //GetWalletHistory();
 
             Title = "Tip Myself Menu";
 
@@ -42,27 +42,27 @@ namespace Talat
             GetTippedTextField();
         }
 
-        private async void GetWalletHistory()
-        {
-            var user = MemoryManager.getUseAccountLogin("user_key");
-            {
-                if (user != null)
-                {
-                    var reult = await NetworkUtil.GetQueryAsyc("Transactions/WalletHistory", user.acctNumber, "AcctNumber");
-                    if (!string.IsNullOrEmpty(reult))
-                    {
-                        TipTransactions[] gottenTransactions = JsonConvert.DeserializeObject<TipTransactions[]>(reult);
+        //private async void GetWalletHistory()
+        //{
+        //    var user = MemoryManager.getUseAccountLogin("user_key");
+        //    {
+        //        if (user != null)
+        //        {
+        //            var reult = await NetworkUtil.GetQueryAsyc("Transactions/WalletHistory", user.acctNumber, "AcctNumber");
+        //            if (!string.IsNullOrEmpty(reult))
+        //            {
+        //                TipTransactions[] gottenTransactions = JsonConvert.DeserializeObject<TipTransactions[]>(reult);
 
-                        foreach (TipTransactions transaction in gottenTransactions)
-                        {
-                            tipTransactions.Add(transaction);
-                        }
-                        tipTransactionTableView.Source = new TipTransactionTableSource(tipTransactions);
-                        tipTransactionTableView.ReloadData();
-                    }
-                }
-            }
-        }
+        //                foreach (TipTransactions transaction in gottenTransactions)
+        //                {
+        //                    tipTransactions.Add(transaction);
+        //                }
+        //                tipTransactionTableView.Source = new TipTransactionTableSource(tipTransactions);
+        //                tipTransactionTableView.ReloadData();
+        //            }
+        //        }
+        //    }
+        //}
 
         private void ShowRestTMSwitch_ValueChanged(object sender, EventArgs e)
         {
@@ -181,8 +181,10 @@ namespace Talat
                         var data = JsonConvert.DeserializeObject<WalletDetailsResponse>(result);
                         if (data != null)
                         {
+                            TipShaerd tipShaerd = new TipShaerd() { percent = data.tipPercent, status = data.tipStatus };
                             showRestTMSwitch.On = data.tipStatus;
                             TMPercentageValue.Text = $"{data.tipPercent}%";
+                            MemoryManager.setSuccessScreenTipStatus(tipShaerd, "tip_key");
                             //Do anything with the response data.
                         }
                     }
@@ -191,6 +193,8 @@ namespace Talat
             }
             
         }  //Get the current Tip Status of the User.
+
+
         public async void GetWalletStatus()
         {
             var user = MemoryManager.getUseAccountLogin("user_key");

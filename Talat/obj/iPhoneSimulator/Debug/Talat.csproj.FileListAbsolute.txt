@@ -50,4 +50,3 @@
 /Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.csproj.CopyComplete
 /Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.exe
 /Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.pdb
-/Users/wemabank/Desktop/Talat/Talat/obj/iPhoneSimulator/Debug/Talat.csproj.AssemblyReference.cache

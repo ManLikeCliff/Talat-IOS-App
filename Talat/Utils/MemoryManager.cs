@@ -57,5 +57,22 @@ namespace Talat.Utils
             }
             return null;
         }
+
+        public static void setSuccessScreenTipStatus(TipShaerd value, string key)
+        {
+            var preference = NSUserDefaults.StandardUserDefaults;
+            preference.SetString(JsonConvert.SerializeObject(value), key);
+        }
+
+        public static TipShaerd getSuccessScreenTipStatus(string key)
+        {
+            var preference = NSUserDefaults.StandardUserDefaults;
+            string mRaw = preference.StringForKey(key);
+            if (!string.IsNullOrEmpty(mRaw))
+            {
+                return JsonConvert.DeserializeObject<TipShaerd>(mRaw);
+            }
+            return null;
+        }
     }
 }

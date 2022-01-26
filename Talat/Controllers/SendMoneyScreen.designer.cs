@@ -67,6 +67,9 @@ namespace Talat
 		UIKit.UIStackView sendMoneyRestView { get; set; }
 
 		[Outlet]
+		UIKit.UISwitch showRestSMSwitch { get; set; }
+
+		[Outlet]
 		UIKit.UILabel userAmountLabel { get; set; }
 		
 		void ReleaseDesignerOutlets ()
@@ -151,6 +154,11 @@ namespace Talat
 				sendMoneyAccountLabel = null;
 			}
 
+			if (sendMoneyLoader != null) {
+				sendMoneyLoader.Dispose ();
+				sendMoneyLoader = null;
+			}
+
 			if (sendMoneyRestView != null) {
 				sendMoneyRestView.Dispose ();
 				sendMoneyRestView = null;
@@ -161,9 +169,9 @@ namespace Talat
 				userAmountLabel = null;
 			}
 
-			if (sendMoneyLoader != null) {
-				sendMoneyLoader.Dispose ();
-				sendMoneyLoader = null;
+			if (showRestSMSwitch != null) {
+				showRestSMSwitch.Dispose ();
+				showRestSMSwitch = null;
 			}
 		}
 	}

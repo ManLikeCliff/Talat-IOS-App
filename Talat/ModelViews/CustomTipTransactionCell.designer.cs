@@ -16,24 +16,36 @@ namespace Talat
 		UIKit.UILabel tippedAmount { get; set; }
 
 		[Outlet]
+		UIKit.UILabel tippedAmountLbl { get; set; }
+
+		[Outlet]
 		UIKit.UILabel tippedDate { get; set; }
+
+		[Outlet]
+		UIKit.UILabel tippedDateLbl { get; set; }
 
 		[Outlet]
 		UIKit.UILabel tippedPercent { get; set; }
 
 		[Outlet]
+		UIKit.UILabel tippedPercentLbl { get; set; }
+
+		[Outlet]
 		UIKit.UILabel tippedTransAmount { get; set; }
+
+		[Outlet]
+		UIKit.UILabel tippedTransAmountLbl { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (tippedTransAmount != null) {
-				tippedTransAmount.Dispose ();
-				tippedTransAmount = null;
-			}
-
 			if (tippedAmount != null) {
 				tippedAmount.Dispose ();
 				tippedAmount = null;
+			}
+
+			if (tippedDate != null) {
+				tippedDate.Dispose ();
+				tippedDate = null;
 			}
 
 			if (tippedPercent != null) {
@@ -41,9 +53,29 @@ namespace Talat
 				tippedPercent = null;
 			}
 
-			if (tippedDate != null) {
-				tippedDate.Dispose ();
-				tippedDate = null;
+			if (tippedTransAmount != null) {
+				tippedTransAmount.Dispose ();
+				tippedTransAmount = null;
+			}
+
+			if (tippedTransAmountLbl != null) {
+				tippedTransAmountLbl.Dispose ();
+				tippedTransAmountLbl = null;
+			}
+
+			if (tippedAmountLbl != null) {
+				tippedAmountLbl.Dispose ();
+				tippedAmountLbl = null;
+			}
+
+			if (tippedPercentLbl != null) {
+				tippedPercentLbl.Dispose ();
+				tippedPercentLbl = null;
+			}
+
+			if (tippedDateLbl != null) {
+				tippedDateLbl.Dispose ();
+				tippedDateLbl = null;
 			}
 		}
 	}

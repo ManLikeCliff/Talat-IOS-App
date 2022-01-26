@@ -1,3 +1,0 @@
-Target dependency graph (2 targets)
-Talat in Talat, no dependencies
-Talat in Talat, no dependencies

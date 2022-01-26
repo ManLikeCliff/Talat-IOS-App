@@ -155,7 +155,7 @@ namespace Talat
 
         private void CreateUserBtn_TouchUpInside(object sender, EventArgs e)
         {
-            signupLoader.StartAnimating();
+            //signupLoader.StartAnimating();
             CreateUser(fnameTextField, lnameTextField, emailSignupTextField, tPinTextField, pwordSignupTextField);
         }
 
@@ -163,6 +163,8 @@ namespace Talat
         {
             if (!checkEmpty(firstName.Text.ToString()) && !checkEmpty(lastName.Text.ToString()) && !checkEmpty(email.Text.ToString()) && !checkEmpty(transactionPin.Text.ToString()) && !checkEmpty(password.Text.ToString()))
             {
+                signupLoader.StartAnimating();
+
                 SignupModel signupModel = new SignupModel(firstName.Text, lastName.Text, email.Text, transactionPin.Text, password.Text);
                 string mRawData = JsonConvert.SerializeObject(signupModel);
                 var result = await NetworkUtil.PostGeneralRequestAsyc("Users/createaccount", mRawData);
@@ -177,8 +179,26 @@ namespace Talat
                 }
                 else
                 {
-                    Console.WriteLine(result);
+                    signupLoader.StopAnimating();
+
                 }
+
+            }
+            else
+            {
+                UIAlertController uIAlert = UIAlertController.Create("Alert!", "Fields cannot be empty", UIAlertControllerStyle.Alert);
+                var okAction = UIAlertAction.Create("Okay", UIAlertActionStyle.Default, null);
+
+                uIAlert.AddAction(okAction);
+
+                PresentViewController(uIAlert, true, null);
+
+                //signupLoader.StopAnimating();
+
+                //Console.WriteLine(result);
+
+                //shola.mich@gmail.com
+                //Legend7438
             }
         }
 

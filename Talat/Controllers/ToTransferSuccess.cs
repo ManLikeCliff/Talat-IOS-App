@@ -4,6 +4,7 @@ using System;
 
 using Foundation;
 using Talat.Models;
+using Talat.Utils;
 using UIKit;
 
 namespace Talat
@@ -13,7 +14,12 @@ namespace Talat
 
 		public decimal amountToSend;
 		public string recipientLabel;
+
+		public decimal walletBalance;
+		public string tipPercent;
+
 		public SendMoneyResponse sendMoneyResponse;
+		public WalletDetailsResponse walletDetailsResponse;
 		public string message;
 
 
@@ -33,6 +39,17 @@ namespace Talat
 
 			transferSuccessAmount.Text = "₦" + amountToSend;
 			transferSuccessAccName.Text = recipientLabel;
+
+			transferSuccessTipAmount.Text = "₦" + walletBalance;
+			transferSuccessTipPercent.Text = tipPercent + "%";
+			toSuccessRestView.Hidden = true;
+			var isTipStatus = MemoryManager.getSuccessScreenTipStatus("tip_key");
+			if(isTipStatus != null && isTipStatus.status)
+            {
+				toSuccessRestView.Hidden = false;
+				transferSuccessTipPercent.Text = isTipStatus.percent + "%";
+				transferSuccessTipAmount.Text = "₦" + sendMoneyResponse.tipAmount.ToString("N0");
+            }
 		}
 
         private void TransferSuccessToDashboard_TouchUpInside(object sender, EventArgs e)

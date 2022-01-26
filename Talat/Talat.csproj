@@ -327,6 +327,26 @@
         <ImageAsset Include="Resources\Assets.xcassets\homeIcon.imageset\homeIcon%403x.png" />
         <ImageAsset Include="Resources\Assets.xcassets\homeIcon.imageset\homeIcon%402x.png" />
         <ImageAsset Include="Resources\Assets.xcassets\homeIcon.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Management Card.imageset\Card Management Card.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Management Card.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Management Card.imageset\Card Management Card%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Management Card.imageset\Card Management Card%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Tip Card.imageset\Tip Card%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Tip Card.imageset\Tip Card%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Tip Card.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Tip Card.imageset\Tip Card.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Send Money Card.imageset\Send Money Card%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Send Money Card.imageset\Send Money Card%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\Send Money Card.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Send Money Card.imageset\Send Money Card.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\eNaira Wallet Card.imageset\eNaira Wallet Card%403x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\eNaira Wallet Card.imageset\eNaira Wallet Card.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\eNaira Wallet Card.imageset\eNaira Wallet Card%402x.png" />
+        <ImageAsset Include="Resources\Assets.xcassets\eNaira Wallet Card.imageset\Contents.json" />
+        <ImageAsset Include="Resources\Assets.xcassets\Send Money.imageset\.DS_Store" />
+        <ImageAsset Include="Resources\Assets.xcassets\Card Request.imageset\.DS_Store" />
+        <ImageAsset Include="Resources\Assets.xcassets\TM.imageset\.DS_Store" />
+        <ImageAsset Include="Resources\Assets.xcassets\e-Naira Wallet.imageset\.DS_Store" />
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources\" />
